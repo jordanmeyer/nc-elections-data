@@ -1,5 +1,5 @@
 # NC Elections Data
-Data and starter maps for an NCData4Good project aimed at educating NC voters.
+Data and starter maps for an @NCData4Good project aimed at educating NC voters.
 
 ## Data
 Most data are from the [State Board of Elections](http://www.ncsbe.gov/) and can be found in their [public data directory]( http://dl.ncsbe.gov/index.html).
