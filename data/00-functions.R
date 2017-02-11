@@ -1,7 +1,7 @@
 ################################################################################
 ## Download and unzip files from NCSBE
 download_ncsbe_data <- function(dir, file.name, ex.dir = ".") {
-  data.dir <- "./"
+  data.dir <- "."
   download.file(paste0("http://dl.ncsbe.gov.s3.amazonaws.com/", dir, file.name),
                 paste0(data.dir, file.name))
   unzip(paste0(data.dir, file.name), exdir=ex.dir)
