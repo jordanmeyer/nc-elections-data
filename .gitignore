@@ -1,0 +1,6 @@
+.DS_Store
+.Rhistory
+__MACOSX
+data/ncvoter_Statewide.txt
+data/ncvhis_Statewide.txt
+data/address_points_sboe.txt

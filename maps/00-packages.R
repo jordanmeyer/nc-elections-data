@@ -1,0 +1,11 @@
+library(readr)
+library(plyr) ## acs requires plyr
+library(dplyr)
+library(stringr)
+library(tigris)
+library(rgdal)
+library(acs)
+library(leaflet)
+library(RColorBrewer)
+library(rgeos)
+library(parallel)
