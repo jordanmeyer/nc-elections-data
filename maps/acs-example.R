@@ -23,7 +23,7 @@ income.df <-
              income@estimate[,5] + income@estimate[,6],
              stringsAsFactors = FALSE)
 
-names(income.df)<-c("GEOID", "total", "below.30k")
+names(income.df) <- c("GEOID", "total", "below.30k")
 income.df$below.30k.percent <- 100*(income.df$below.30k/income.df$total)
 
 ## Merge the acs data with the census shapes

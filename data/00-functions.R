@@ -135,7 +135,7 @@ geocodeAdddress <- function(address) {
   } else {
     out <- NA
   }
-  Sys.sleep(0.2)  # API only allows 5 requests per second
+  Sys.sleep(0.2)  # API allows 5 requests per second
   out
 }
 
@@ -157,12 +157,12 @@ get_early_voting <- function(){
     early.voting %>%
     select(addr.line.1, addr.line.2) %>%
     distinct() %>%
-    mutate(full.addr = paste(addr.line.1, addr.line.2))
+    ## Google doesn't seem to like the # signs used in several addresses
+    mutate(full.addr = str_replace(paste(addr.line.1, addr.line.2), "#", ""))
 
-  ## manual clean-up for geocoding
+  ## manual clean-up for geocoding, these showed empty our outside of NC
   addresses[25,"full.addr"] <- "1044 SABBATH HOME RD SUPPLY, NC 28462"
   addresses[94,"full.addr"] <- "2694 GENERAL HOWE HWY RIEGELWOOD, NC 28456"
-  addresses[380,"full.addr"] <- "1000 N FIRST ST ALBEMARLE, NC 28001"
 
   address.geos <-
   lapply(1:nrow(addresses),
