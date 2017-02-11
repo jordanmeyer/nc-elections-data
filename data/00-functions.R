@@ -157,10 +157,10 @@ get_early_voting <- function(){
     early.voting %>%
     select(addr.line.1, addr.line.2) %>%
     distinct() %>%
-    ## Google doesn't seem to like the # signs used in several addresses
+    ## Google doesn't seem to like the #'s used in several addresses
     mutate(full.addr = str_replace(paste(addr.line.1, addr.line.2), "#", ""))
 
-  ## manual clean-up for geocoding, these showed empty our outside of NC
+  ## manual clean-up for geocoding, these showed empty or outside of NC
   addresses[25,"full.addr"] <- "1044 SABBATH HOME RD SUPPLY, NC 28462"
   addresses[94,"full.addr"] <- "2694 GENERAL HOWE HWY RIEGELWOOD, NC 28456"
 
