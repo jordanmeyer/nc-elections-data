@@ -4,6 +4,7 @@ library(rvest)
 library(stringr)
 library(sp)
 library(RJSONIO)
+library(rgdal)
 
 source("00-functions.R")
 
